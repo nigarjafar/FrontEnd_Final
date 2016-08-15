@@ -1,0 +1,18 @@
+#logos{
+    position:relative;
+    width:100%;
+    background:$second-color;
+    padding:0px 140px;
+    overflow: hidden;
+       img{
+        position:relative;
+        margin:40px 30px;
+           //animation jquery=> top : 0
+           &:nth-child(odd){
+               top:100px;
+           }
+           &:nth-child(even){
+               bottom:100px;
+           }
+        } 
+}

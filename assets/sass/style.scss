@@ -1,0 +1,40 @@
+@import "variable";
+@import "navbar";
+@import "slider";
+@import "logos";
+@import "about";
+    
+body,html{
+    height:100%;
+    background-image: url("../img/background/bg.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Lato', sans-serif;
+}
+
+button{
+    text-transform:uppercase;
+}
+
+h2{
+    color:#010101;
+    text-transform:uppercase;
+    font-weight:300;
+    font{
+        color:$main-color;
+    }
+}
+
+p,.subtitle{
+    font-family:'Pt Sans' ,sans-serif;
+    font-size:16px;
+    line-height:25px;
+    clear:both;
+}
+
+.subtitle{
+    padding:10px 0px; 
+    width:400px;
+}
+

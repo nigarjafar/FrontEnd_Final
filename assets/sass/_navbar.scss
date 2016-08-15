@@ -1,0 +1,45 @@
+nav{
+    .navbar-header{
+        padding-right:50px;
+        a{  
+            
+            img{
+            width:130px;
+            } 
+        }
+    }
+    .navbar-nav{
+        
+        li{
+            a{
+                padding:20px 10px 15px;
+                color:#DEC8D1;
+                text-transform:uppercase;
+                font-size:14px;
+                &:hover{
+                    color: $main-color;
+                    background:none;
+                }
+                &:focus{
+                    background:none;
+                }
+            }
+            
+        }
+        .active{
+            border-bottom:2px solid $main-color;
+            color:$main-color;
+        }
+        button{
+            margin:15px 0px 0px 1px;
+            border:1px solid $main-color;
+            padding:5px 20px;
+            color:$main-color;
+            background:none;
+            text-transform:uppercase;
+            border-radius:2px;
+
+        }
+    }
+    
+}
