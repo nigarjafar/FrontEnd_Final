@@ -208,28 +208,151 @@ nav .navbar-nav button {
   background: white;
   padding: 40px; }
   #prices .price {
+    margin-top: 60px;
+    padding-bottom: 50px;
     background: #F7F7F7;
-    border: 1px solid #F0F0F1; }
+    border: 1px solid #F0F0F1;
+    transition: background 0.4s ease; }
     #prices .price h5 {
       text-transform: uppercase;
       font-weight: 300;
       font-size: 25px;
-      color: #3d3d3d; }
+      color: #3d3d3d;
+      margin: 20px; }
     #prices .price div {
       background: #F0F0F1;
-      font-size: 115px;
-      position: relative; }
+      transition: background 0.4s ease;
+      padding: 15px; }
       #prices .price div span {
-        margin: 0;
         color: #1AC6FF;
-        text-transform: uppercase;
-        display: inline-block; }
+        text-transform: uppercase; }
         #prices .price div span:first-child {
           font-size: 47px; }
         #prices .price div span:nth-child(2) {
           font-size: 115px; }
         #prices .price div span:last-child {
           font-size: 15px; }
+    #prices .price ul {
+      list-style-type: none;
+      padding: 20px 50px; }
+      #prices .price ul li {
+        font-size: 16px;
+        color: #575757;
+        padding: 15px;
+        border-bottom: 1px solid #d6d6d6; }
+        #prices .price ul li font {
+          font-weight: 700; }
+        #prices .price ul li:last-child {
+          border: none; }
+    #prices .price button {
+      padding: 15px 80px;
+      background: none;
+      border-radius: 3px;
+      border: 1px solid #1AC6FF;
+      color: #1AC6FF;
+      text-transform: uppercase;
+      font-weight: 700; }
+  #prices .price:hover {
+    background: #1AC6FF; }
+    #prices .price:hover h5 {
+      color: white; }
+    #prices .price:hover div {
+      background: #23ADDB; }
+      #prices .price:hover div span {
+        color: white; }
+    #prices .price:hover li {
+      color: white;
+      border-color: #e4e4e4; }
+    #prices .price:hover button {
+      border-color: white;
+      color: white; }
+      #prices .price:hover button:hover {
+        background: white;
+        color: #1AC6FF; }
+  #prices .disabled {
+    pointer-events: none;
+    opacity: 0.7; }
+    #prices .disabled div span {
+      color: #8a8a8a; }
+    #prices .disabled button {
+      border-color: #707070;
+      color: #8a8a8a; }
+
+#awards {
+  background: white;
+  padding: 20px; }
+  #awards div {
+    margin-top: 50px; }
+    #awards div img {
+      margin: 20px 40px; }
+      #awards div img:hover {
+        opacity: 0.7; }
+
+#feedback h2 {
+  color: white; }
+#feedback #reviews {
+  padding: 20px; }
+  #feedback #reviews div {
+    margin-top: 10px; }
+    #feedback #reviews div img {
+      margin: 10px; }
+    #feedback #reviews div p {
+      font-family: "Lato", sans-serif;
+      color: white;
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 30px; }
+#feedback #clients {
+  background: white; }
+  #feedback #clients .col-md-10 {
+    border-bottom: 1px solid #d6d6d6; }
+  #feedback #clients .client {
+    opacity: 0.7;
+    position: relative;
+    padding: 35px 0px; }
+    #feedback #clients .client img {
+      width: 70px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 15px; }
+    #feedback #clients .client div {
+      position: absolute;
+      height: auto;
+      padding: 10px 0px;
+      display: inline-block; }
+      #feedback #clients .client div h3 {
+        font-size: 16px;
+        margin: 5px 0;
+        color: #575757;
+        text-transform: uppercase; }
+      #feedback #clients .client div span {
+        font-size: 16px;
+        color: #575757; }
+  #feedback #clients .client-active {
+    opacity: 1;
+    border-bottom: 1px solid #1AC6FF; }
+    #feedback #clients .client-active div h3 {
+      color: #1AC6FF; }
+    #feedback #clients .client-active div span {
+      color: #575757; }
+      #feedback #clients .client-active div span font {
+        color: #1AC6FF; }
+
+#team {
+  padding: 40px 0;
+  background: white; }
+  #team p {
+    margin: 40px; }
+  #team .team-member {
+    margin-top: 40px; }
+    #team .team-member h4 {
+      margin: 15px;
+      color: #2BCAFF;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 15px; }
+    #team .team-member span {
+      color: #0a0a0a; }
 
 body, html {
   height: 100%;

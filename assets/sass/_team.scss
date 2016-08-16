@@ -1,0 +1,20 @@
+#team{
+    padding:40px 0;
+    background:white;
+    p{
+        margin:40px;
+    }
+    .team-member{
+        margin-top:40px;
+        h4{
+            margin:15px;
+            color:#2BCAFF;
+            text-transform:uppercase;
+            font-weight:700;
+            font-size:15px;
+        }
+        span{
+            color:darken($second-color,90%);
+        }
+    }
+}
