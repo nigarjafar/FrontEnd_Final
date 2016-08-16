@@ -15,4 +15,51 @@ var logos= setInterval(function(){
 , 300);
 
 
+//*********************ABOUT********************
+$(".firstTab").show()
+$(".secondTab").hide()
+$(".thirdTab").hide()
 
+$("#about .button-group button:first-child")
+.on('click', function(){
+	$(".button-group button").removeClass("active-button")
+	$(".button-group button:first-child").addClass("active-button")
+
+	$(".firstTab").show()
+	$(".secondTab").hide()
+	$(".thirdTab").hide()
+
+})
+$("#about .button-group button:nth-child(2)")
+.on('click', function(){
+	$(".button-group button").removeClass("active-button")
+	$(".button-group button:nth-child(2)").addClass("active-button")
+
+	$(".firstTab").hide()
+	$(".secondTab").show()
+	$(".thirdTab").hide()
+})
+$("#about .button-group button:nth-child(3)")
+.on('click', function(){
+	$(".button-group button").removeClass("active-button")
+	$(".button-group button:nth-child(3)").addClass("active-button")
+
+	$(".firstTab").hide()
+	$(".secondTab").hide()
+	$(".thirdTab").show()
+})
+
+//******************************Features*********************
+$("#features #ftrs2, #features #ftrs3").hide(); //hide image2 /image3
+
+
+
+$("#features ul li").on("click", function(){
+	var className=$(this).attr("class")
+	$("#features .img-div img").hide();
+	$("#"+className).show()
+
+	$("#features li").removeClass("active")
+	$(this).addClass("active")
+	
+})

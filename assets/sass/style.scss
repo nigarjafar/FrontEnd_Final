@@ -3,6 +3,9 @@
 @import "slider";
 @import "logos";
 @import "about";
+@import "features";
+@import "uptades";
+@import "prices";
     
 body,html{
     height:100%;
@@ -21,6 +24,7 @@ h2{
     color:#010101;
     text-transform:uppercase;
     font-weight:300;
+    font-size:45px;
     font{
         color:$main-color;
     }

@@ -26,7 +26,7 @@ nav .navbar-nav button {
 
 #slider {
   opacity: 0;
-  margin: 200px 0;
+  margin: 210px 0;
   transition: all 0.5s ease; }
   #slider h1 {
     font-size: 58px;
@@ -86,12 +86,22 @@ nav .navbar-nav button {
       padding: 19px 59px;
       background: white;
       color: #3d3d3d;
-      border: 1px solid #F0F0F0; }
+      border: 1px solid #F0F0F0;
+      transition: background 0.3s ease; }
     #about .button-group .active-button, #about .button-group button:hover {
       border: none;
       background: #1AC6FF;
       color: white;
       padding: 20px 60px; }
+  #about .thirdTab .col-md-4 {
+    margin-top: 80px;
+    padding: 0 55px; }
+    #about .thirdTab .col-md-4 i {
+      color: #1AC6FF; }
+    #about .thirdTab .col-md-4 h6 {
+      text-transform: uppercase;
+      font-size: 16px;
+      margin: 20px 0 15px; }
   #about .img-div img {
     width: 555px; }
   #about .text-div h2 {
@@ -116,6 +126,111 @@ nav .navbar-nav button {
   #about .container {
     padding: 20px 30px; }
 
+#features .container-fluid:first-child {
+  background: #F0F0F0;
+  padding: 40px 0px 20px; }
+  #features .container-fluid:first-child ul {
+    margin-top: 50px;
+    list-style-type: none; }
+    #features .container-fluid:first-child ul li {
+      padding: 25px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px; }
+      #features .container-fluid:first-child ul li span {
+        font-size: 17px;
+        font-weight: 700;
+        color: #1AC6FF;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        display: block; }
+      #features .container-fluid:first-child ul li p {
+        color: #8a8a8a; }
+    #features .container-fluid:first-child ul .active {
+      background: #1AC6FF; }
+      #features .container-fluid:first-child ul .active span, #features .container-fluid:first-child ul .active p {
+        color: white; }
+  #features .container-fluid:first-child .img-div {
+    position: relative; }
+    #features .container-fluid:first-child .img-div img {
+      position: absolute;
+      left: -102px; }
+#features .container-fluid:last-child {
+  background: white;
+  padding: 50px 0; }
+  #features .container-fluid:last-child .row {
+    margin: 60px 0; }
+  #features .container-fluid:last-child i {
+    color: #1AC6FF;
+    margin-bottom: 15px; }
+  #features .container-fluid:last-child h6 {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 10px; }
+  #features .container-fluid:last-child p {
+    color: #8a8a8a; }
+
+#uptades {
+  padding: 45px; }
+  #uptades h1 {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 45px;
+    color: white;
+    margin-top: 0; }
+  #uptades p {
+    font-size: 17px;
+    color: white; }
+  #uptades .form-group {
+    margin: 15px; }
+    #uptades .form-group input {
+      padding: 12px 20px;
+      border-left: 4px solid #1AC6FF;
+      font-size: 20px;
+      margin-right: 10px; }
+    #uptades .form-group input:first-child {
+      width: 170px; }
+    #uptades .form-group input:nth-child(2) {
+      width: 260px; }
+    #uptades .form-group button {
+      border-radius: 3px;
+      padding: 15px 30px;
+      text-transform: uppercase;
+      color: white;
+      font-size: 16px;
+      border: 1px solid white;
+      background: none;
+      margin: -1px; }
+      #uptades .form-group button:hover {
+        color: #1AC6FF;
+        background: white; }
+
+#prices {
+  background: white;
+  padding: 40px; }
+  #prices .price {
+    background: #F7F7F7;
+    border: 1px solid #F0F0F1; }
+    #prices .price h5 {
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 25px;
+      color: #3d3d3d; }
+    #prices .price div {
+      background: #F0F0F1;
+      font-size: 115px;
+      position: relative; }
+      #prices .price div span {
+        margin: 0;
+        color: #1AC6FF;
+        text-transform: uppercase;
+        display: inline-block; }
+        #prices .price div span:first-child {
+          font-size: 47px; }
+        #prices .price div span:nth-child(2) {
+          font-size: 115px; }
+        #prices .price div span:last-child {
+          font-size: 15px; }
+
 body, html {
   height: 100%;
   background-image: url("../img/background/bg.jpg");
@@ -130,7 +245,8 @@ button {
 h2 {
   color: #010101;
   text-transform: uppercase;
-  font-weight: 300; }
+  font-weight: 300;
+  font-size: 45px; }
   h2 font {
     color: #1AC6FF; }
 

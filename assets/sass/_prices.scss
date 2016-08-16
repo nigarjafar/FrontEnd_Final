@@ -1,0 +1,28 @@
+#prices{
+    background:white;
+    padding:40px;
+    .price{
+        background:$third-color;
+        border:1px solid $fourth-color;
+        h5{
+            text-transform: uppercase;
+            font-weight:300;
+            font-size:25px;
+            color:darken($second-color, 70%);
+        }
+        div{
+            background:$fourth-color;
+            font-size:115px;
+            position:relative;
+            span{
+                margin:0;
+                color:$main-color;
+                text-transform:uppercase;
+                display:inline-block;
+                &:first-child{font-size:47px;}
+                &:nth-child(2){font-size:115px;}
+                &:last-child{font-size:15px}
+            }
+        }
+    }
+}
