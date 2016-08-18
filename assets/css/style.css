@@ -26,7 +26,7 @@ nav .navbar-nav button {
 
 #slider {
   opacity: 0;
-  margin: 210px 0;
+  margin: 245px 0;
   transition: all 0.5s ease; }
   #slider h1 {
     font-size: 58px;
@@ -67,13 +67,14 @@ nav .navbar-nav button {
   overflow: hidden; }
   #logos img {
     position: relative;
-    margin: 40px 30px; }
+    margin: 40px 35px; }
     #logos img:nth-child(odd) {
       top: 100px; }
     #logos img:nth-child(even) {
       bottom: 100px; }
 
 #about {
+  overflow: hidden;
   padding-top: 40px;
   padding-bottom: 100px;
   height: auto;
@@ -93,6 +94,25 @@ nav .navbar-nav button {
       background: #1AC6FF;
       color: white;
       padding: 20px 60px; }
+  #about .firstTab {
+    position: relative; }
+    #about .firstTab .text-div {
+      position: relative;
+      right: -800px; }
+    #about .firstTab .img-div {
+      position: relative;
+      left: -800px; }
+  #about .secondTab {
+    position: relative; }
+    #about .secondTab .img-div {
+      position: relative;
+      right: -800px; }
+    #about .secondTab .text-div {
+      position: relative;
+      left: -800px; }
+  #about .thirdTab .row {
+    position: relative;
+    top: -800px; }
   #about .thirdTab .col-md-4 {
     margin-top: 80px;
     padding: 0 55px; }
@@ -344,7 +364,8 @@ nav .navbar-nav button {
   #team p {
     margin: 40px; }
   #team .team-member {
-    margin-top: 40px; }
+    margin-top: 40px;
+    position: relative; }
     #team .team-member h4 {
       margin: 15px;
       color: #2BCAFF;
@@ -353,6 +374,102 @@ nav .navbar-nav button {
       font-size: 15px; }
     #team .team-member span {
       color: #0a0a0a; }
+    #team .team-member .info-team {
+      opacity: 0;
+      width: 263px;
+      height: 262px;
+      position: absolute;
+      background: rgba(26, 198, 255, 0.8);
+      top: 0;
+      transition: all 0.3s ease; }
+      #team .team-member .info-team p {
+        color: white;
+        margin: 35px 15px 10px;
+        line-height: 20px; }
+      #team .team-member .info-team div {
+        position: absolute;
+        bottom: 10px;
+        width: 263px; }
+        #team .team-member .info-team div i {
+          border-radius: 3px;
+          border: 1px solid white;
+          margin: 5px;
+          width: 35px;
+          height: 35px;
+          padding: 10px;
+          text-align: center;
+          color: white; }
+    #team .team-member:hover .info-team {
+      opacity: 1; }
+
+#startup {
+  padding: 30px 0 15px;
+  background: #1AC6FF; }
+  #startup .row div i {
+    color: white;
+    font-weight: 300;
+    transform: rotate(-30deg);
+    margin: 15px; }
+  #startup .row div h1 {
+    color: white;
+    font-size: 45px;
+    font-weight: 300;
+    margin: 0 0 5px 15px;
+    text-transform: uppercase; }
+  #startup .row div p {
+    margin-left: 15px;
+    color: white; }
+  #startup .row div button {
+    float: right;
+    text-transform: uppercase;
+    border-radius: 3px;
+    border: 1px solid white;
+    color: white;
+    padding: 15px 25px;
+    background: none;
+    margin: 15px 0;
+    transition: all 0.3s ease; }
+    #startup .row div button:hover {
+      background: white;
+      color: #1AC6FF; }
+
+#footer #summary {
+  padding: 70px 0px; }
+  #footer #summary .row div img {
+    margin-bottom: 30px; }
+  #footer #summary .row div p {
+    font-size: 16px;
+    color: white;
+    font-weight: 300;
+    line-height: 25px;
+    margin-bottom: 10px; }
+  #footer #summary .row div h3 {
+    font-size: 20px;
+    color: #FBFBFC;
+    margin: 0 0 30px 0;
+    text-transform: uppercase; }
+  #footer #summary .row div i {
+    display: inline-block;
+    color: #1AC6FF;
+    margin: 20px; }
+  #footer #summary .row div div {
+    position: relative;
+    margin-top: 20px;
+    padding: 0; }
+    #footer #summary .row div div .i-contact {
+      position: absolute;
+      font-size: 20px;
+      margin: 0;
+      display: block; }
+    #footer #summary .row div div a {
+      position: absolute;
+      font-size: 16px;
+      color: #1AC6FF; }
+    #footer #summary .row div div span {
+      position: absolute;
+      font-size: 16px;
+      color: white;
+      line-height: 25px; }
 
 body, html {
   height: 100%;

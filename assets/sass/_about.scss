@@ -1,4 +1,5 @@
 #about{
+    overflow:hidden;
     padding-top:40px;
     padding-bottom:100px;
     height:auto;
@@ -21,6 +22,39 @@
             padding:20px 60px;
         }
     }
+    //=>jquery/ animation
+   .firstTab{
+        position:relative;
+        .text-div{
+            position:relative;
+            right:-800px;
+        }
+       .img-div{
+           position:relative;
+           left:-800px;
+       }
+    }
+    .secondTab{
+        position:relative;
+        .img-div{
+            position:relative;
+            right:-800px;
+        }
+       .text-div{
+           position:relative;
+           left:-800px;
+       }       
+    }
+    
+    .thirdTab{
+        .subtitle{  
+        }
+        .row{
+            position:relative;
+            top:-800px;
+        }
+    }
+    //
     .thirdTab{
         .col-md-4{
             margin-top:80px;

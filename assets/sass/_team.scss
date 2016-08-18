@@ -6,6 +6,7 @@
     }
     .team-member{
         margin-top:40px;
+        position:relative;
         h4{
             margin:15px;
             color:#2BCAFF;
@@ -15,6 +16,41 @@
         }
         span{
             color:darken($second-color,90%);
+        }
+        
+        .info-team{
+            opacity:0;
+            width:263px;
+            height:262px;
+            position:absolute;
+            background: rgba(26,198,255,0.8);
+            top:0;
+            transition:all 0.3s ease;
+            
+            p{
+                color:white;
+                margin:35px 15px 10px;;
+                line-height:20px;
+            }
+            
+            div{
+                position:absolute;
+                bottom:10px;
+                width:263px;
+                i{
+                    border-radius:3px;
+                    border: 1px solid white;
+                    margin:5px;
+                    width:35px;
+                    height:35px;
+                    padding:10px;
+                    text-align:center;
+                    color:white
+                }
+            }
+        }
+        &:hover{
+            .info-team{opacity:1}
         }
     }
 }
