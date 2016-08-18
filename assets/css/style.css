@@ -80,8 +80,7 @@ nav .navbar-nav button {
   height: auto;
   background: white; }
   #about .button-group {
-    margin: 0 auto;
-    width: 600px; }
+    padding: 0 50px; }
     #about .button-group button {
       margin: 30px 0px;
       padding: 19px 59px;
@@ -94,25 +93,6 @@ nav .navbar-nav button {
       background: #1AC6FF;
       color: white;
       padding: 20px 60px; }
-  #about .firstTab {
-    position: relative; }
-    #about .firstTab .text-div {
-      position: relative;
-      right: -800px; }
-    #about .firstTab .img-div {
-      position: relative;
-      left: -800px; }
-  #about .secondTab {
-    position: relative; }
-    #about .secondTab .img-div {
-      position: relative;
-      right: -800px; }
-    #about .secondTab .text-div {
-      position: relative;
-      left: -800px; }
-  #about .thirdTab .row {
-    position: relative;
-    top: -800px; }
   #about .thirdTab .col-md-4 {
     margin-top: 80px;
     padding: 0 55px; }
@@ -169,11 +149,9 @@ nav .navbar-nav button {
       background: #1AC6FF; }
       #features .container-fluid:first-child ul .active span, #features .container-fluid:first-child ul .active p {
         color: white; }
-  #features .container-fluid:first-child .img-div {
-    position: relative; }
-    #features .container-fluid:first-child .img-div img {
-      position: absolute;
-      left: -102px; }
+  #features .container-fluid:first-child .img-div img {
+    position: relative;
+    left: -115px; }
 #features .container-fluid:last-child {
   background: white;
   padding: 50px 0; }
@@ -203,6 +181,7 @@ nav .navbar-nav button {
   #uptades .form-group {
     margin: 15px; }
     #uptades .form-group input {
+      border: none;
       padding: 12px 20px;
       border-left: 4px solid #1AC6FF;
       font-size: 20px;
@@ -212,14 +191,15 @@ nav .navbar-nav button {
     #uptades .form-group input:nth-child(2) {
       width: 260px; }
     #uptades .form-group button {
+      position: relative;
+      top: -2px;
       border-radius: 3px;
-      padding: 15px 30px;
+      padding: 14px 30px;
       text-transform: uppercase;
       color: white;
       font-size: 16px;
       border: 1px solid white;
-      background: none;
-      margin: -1px; }
+      background: none; }
       #uptades .form-group button:hover {
         color: #1AC6FF;
         background: white; }
@@ -299,6 +279,7 @@ nav .navbar-nav button {
       color: #8a8a8a; }
 
 #awards {
+  overflow: hidden;
   background: white;
   padding: 20px; }
   #awards div {
@@ -471,6 +452,74 @@ nav .navbar-nav button {
       color: white;
       line-height: 25px; }
 
+.animateLeft {
+  position: relative;
+  animation: animateLeft .8s ease;
+  animation-play-state: paused; }
+
+@keyframes animateLeft {
+  0% {
+    left: -1300px; }
+  70% {
+    left: 40px; }
+  100% {
+    left: 0px; } }
+.animateRight {
+  position: relative;
+  animation: animateRight .8s ease;
+  animation-play-state: paused; }
+
+@keyframes animateRight {
+  0% {
+    right: -1300px; }
+  70% {
+    right: 40px; }
+  100% {
+    right: 0px; } }
+.animateZoom {
+  animation: animateZoom .7s ease;
+  animation-play-state: paused; }
+
+@keyframes animateZoom {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(1); } }
+.animateTop {
+  position: relative;
+  animation: animateTop .7s ease;
+  animation-play-state: paused; }
+
+@keyframes animateTop {
+  0% {
+    top: -1000px; }
+  70% {
+    top: 30px; }
+  100% {
+    top: 0; } }
+.animateBottom {
+  position: relative;
+  animation: animateBottom .7s ease;
+  animation-play-state: paused; }
+
+@keyframes animateBottom {
+  0% {
+    bottom: -1300px; }
+  70% {
+    bottom: 30px; }
+  100% {
+    bottom: 0; } }
+.feature3 {
+  animation: feature3 .7s ease;
+  animation-play-state: paused; }
+
+@keyframes feature3 {
+  0% {
+    left: 1000px; }
+  80% {
+    left: -160px; }
+  100% {
+    left: -115px; } }
 body, html {
   height: 100%;
   background-image: url("../img/background/bg.jpg");

@@ -5,8 +5,7 @@
     height:auto;
     background:white;
     .button-group{
-        margin:0 auto;
-        width:600px;
+        padding:0 50px;
         button{
             margin:30px 0px;
             padding:19px 59px;
@@ -22,39 +21,7 @@
             padding:20px 60px;
         }
     }
-    //=>jquery/ animation
-   .firstTab{
-        position:relative;
-        .text-div{
-            position:relative;
-            right:-800px;
-        }
-       .img-div{
-           position:relative;
-           left:-800px;
-       }
-    }
-    .secondTab{
-        position:relative;
-        .img-div{
-            position:relative;
-            right:-800px;
-        }
-       .text-div{
-           position:relative;
-           left:-800px;
-       }       
-    }
-    
-    .thirdTab{
-        .subtitle{  
-        }
-        .row{
-            position:relative;
-            top:-800px;
-        }
-    }
-    //
+   
     .thirdTab{
         .col-md-4{
             margin-top:80px;

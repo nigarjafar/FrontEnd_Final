@@ -1,22 +1,16 @@
 //******************SLIDER******************
 setTimeout(function(){ $("#slider").animate({"opacity": "1"}) ; }, 500);
 //*****************LOGOS*******************
-i=1;
-var k=1;
-function clickButton(){
-		if(k==1){
-			$("#about .button-group button:first-child").click();
-			k=0;
-			
-		}	
-	}
 
+
+//********************Scroll function*******************//
+var i=1;
 $(window).scroll(function() {
   var wScroll=$(window).scrollTop()
   var wHeight=$(window).height()
 
 
-
+//****************Logos**********************
 if ( wScroll > $("#logos").offset().top-wHeight/2-100 ){
 
 	var logos= setInterval(function(){
@@ -29,101 +23,104 @@ if ( wScroll > $("#logos").offset().top-wHeight/2-100 ){
 	}
 	, 300);
 }
-
-
-
-
-
-//*********************ABOUT********************0507699367
-
-if ( wScroll > $("#about").offset().top-wHeight/2 ){
-/*$(".firstTab").show()
-$(".firstTab").find(".text-div").animate({"right":"0"},350)
-$(".firstTab").find(".img-div").animate({"left":"0"},350)
-
-$(".secondTab").hide()
-$(".thirdTab").hide()
-$(".thirdTab .subtitle").fadeOut()*/
-
-	
-clickButton();
-}//if
-
-
-$("#about .button-group button:first-child")
-.on('click', function(){
-	//Add button active class/ remove class another buttons
-	$(".button-group button").removeClass("active-button")
-	$(".button-group button:first-child").addClass("active-button")
-
-	$(".firstTab").show()
-	$(".firstTab .text-div").animate({"right":"0"},350)
-	$(".firstTab .img-div").animate({"left":"0"},350)
-
-	//Hide other tabs 
-	$(".secondTab").hide()
-	$(".secondTab .img-div").css("right","-800px")
-	$(".secondTab .text-div").css("left","-800px")
-
-	$(".thirdTab").hide()
-	$(".thirdTab .row").css("top","-800px")
-	$(".thirdTab .subtitle").fadeOut()
-
+    //*****************ABout**************//
+   if ( wScroll > $("#about").offset().top-wHeight/2 ){
+    $("#about .firstTab").show() 
+    $("#about .firstTab .animateLeft").css("animation-play-state" , "running");
+    $("#about .firstTab .animateRight").css("animation-play-state" , "running");
+    $("#about .secondTab").hide()
+    $("#about .thirdTab").hide()
+        if ( wScroll > $("#about .newAgeTech").offset().top-wHeight/2 ){
+             $("#about .newAgeTech .animateLeft").css("animation-play-state" , "running");
+            $("#about .newAgeTech .animateRight").css("animation-play-state" , "running");
+        }
+         if ( wScroll > $("#about .helmet").offset().top-wHeight/2 ){
+             $("#about .helmet .animateLeft").css("animation-play-state" , "running");
+            $("#about .helmet .animateRight").css("animation-play-state" , "running");
+        }
+    
+   }
+    
+    //****************Features****************//
+    if ( wScroll > $("#features .animateRight").offset().top-wHeight/2+10 ){
+    $("#features .animateRight").css("animation-play-state" , "running");
+    }
+    
+     if ( wScroll > $("#features .animateLeft").offset().top-wHeight/2 ){
+    $("#features .animateLeft").css("animation-play-state" , "running");
+    }
+    
+    //*******************Uptades************************
+    if ( wScroll > $("#uptades .animateRight").offset().top-wHeight/2){
+    $("#uptades .animateRight").css("animation-play-state" , "running");
+    }
+    
+     if ( wScroll > $("#uptades .animateLeft").offset().top-wHeight/2-20 ){
+    $("#uptades .animateLeft").css("animation-play-state" , "running");
+    }
+    
+    //*****************Prices***********************
+    if ( wScroll > $("#prices").offset().top-wHeight/2+20 ){
+    $("#prices .animateBottom").css("animation-play-state" , "running");
+    }
+    
+    //****************Awards*****************
+    if ( wScroll > $("#awards").offset().top-wHeight/2+20 ){
+    $("#awards .animateTop").css("animation-play-state" , "running");
+    }
+    
 })
 
-$("#about .button-group button:nth-child(2)")
-.on('click', function(){
-	$(".button-group button").removeClass("active-button")
-	$(".button-group button:nth-child(2)").addClass("active-button")
+//**********************Buttons***********************
 
-	$(".secondTab").show()
-	$(".secondTab .img-div").animate({"right":"0"},350)
-	$(".secondTab .text-div").animate({"left":"0"},350)
-
-	//Hide other tabs
-	$(".firstTab").hide()
-	$(".firstTab .text-div").css("right","-800px")
-	$(".firstTab .img-div").css("left","-800px")
-
-	$(".thirdTab").hide()
-	$(".thirdTab .row").css("top","-800px")
-	$(".thirdTab .subtitle").fadeOut()
+//******************ABOUT********************
+   
+$("#about .button-group button:first-child").on('click', function(){
+    $("#about .button-group button").removeClass("active-button");
+    $(this).addClass("active-button");
+    $("#about .firstTab").show() 
+    $("#about .firstTab .animateLeft").css("animation-play-state" , "running");
+    $("#about .firstTab .animateRight").css("animation-play-state" , "running");
+    $("#about .secondTab").hide()
+    $("#about .thirdTab").hide()
+    
 })
 
-$("#about .button-group button:nth-child(3)")
-.on('click', function(){
-	$(".button-group button").removeClass("active-button")
-	$(".button-group button:nth-child(3)").addClass("active-button")
+$("#about .button-group button:nth-child(2)").on('click', function(){
+    $("#about .button-group button").removeClass("active-button");
+    $(this).addClass("active-button");
+    $("#about .secondTab").show()
+    $("#about .secondTab .animateLeft").css("animation-play-state" , "running")
+    $("#about .secondTab .animateRight").css("animation-play-state" , "running")
+    $("#about .firstTab").hide()
+    $("#about .thirdTab").hide()
+    
+})
 
-	$(".thirdTab").show()
-	$(".thirdTab .subtitle").fadeIn()
-	$(".thirdTab .row").animate({top:"0"})
-
-	//Hide other tabs
-	$(".firstTab").hide()
-	$(".firstTab .text-div").css("right","-800px")
-	$(".firstTab .img-div").css("left","-800px")
-
-	$(".secondTab").hide()
-	$(".secondTab .img-div").css("right","-800px")
-	$(".secondTab .text-div").css("left","-800px")
+$("#about .button-group button:nth-child(3)").on('click', function(){
+    $("#about .button-group button").removeClass("active-button");
+    $(this).addClass("active-button");
+    $("#about .thirdTab").show()
+    $("#about .thirdTab .animateZoom").css("animation-play-state" , "running")
+    $("#about .thirdTab .animateTop").css("animation-play-state" , "running")
+    $("#about .firstTab").hide()
+    $("#about .secondTab").hide()
+    
 })
 
 
-
-}); //Scroll FUnction
-
-//******************************Features*********************
-$("#features #ftrs2, #features #ftrs3").hide(); //hide image2 /image3
+//******************************Features*******************
+$("#features .ftrs2, #features .feature3").hide(); //hide image2 /image3
 
 
 
 $("#features ul li").on("click", function(){
-	var className=$(this).attr("class")
-	$("#features .img-div img").hide();
-	$("#"+className).show()
-
-	$("#features li").removeClass("active")
+    $("#features li").removeClass("active")
+    $("#features .img-div img").hide()
+    
+	var idName=$(this).attr("id")
+    console.log(idName)
+	$("."+idName).show().css("animation-play-state" , "running")
 	$(this).addClass("active")
 	
 })
