@@ -289,59 +289,62 @@ nav .navbar-nav button {
       #awards div img:hover {
         opacity: 0.7; }
 
-#feedback h2 {
-  color: white; }
-#feedback #reviews {
-  padding: 20px; }
-  #feedback #reviews div {
-    margin-top: 10px; }
-    #feedback #reviews div img {
-      margin: 10px; }
-    #feedback #reviews div p {
-      font-family: "Lato", sans-serif;
-      color: white;
-      font-size: 17px;
-      font-weight: 300;
-      line-height: 30px; }
-#feedback #clients {
-  background: white; }
-  #feedback #clients .col-md-10 {
-    border-bottom: 1px solid #d6d6d6; }
-  #feedback #clients .client {
-    opacity: 0.7;
-    position: relative;
-    padding: 35px 0px; }
-    #feedback #clients .client img {
-      width: 70px;
-      border-radius: 50%;
-      display: inline-block;
-      margin-right: 15px; }
-    #feedback #clients .client div {
-      position: absolute;
-      height: auto;
-      padding: 10px 0px;
-      display: inline-block; }
-      #feedback #clients .client div h3 {
-        font-size: 16px;
-        margin: 5px 0;
-        color: #575757;
-        text-transform: uppercase; }
-      #feedback #clients .client div span {
-        font-size: 16px;
-        color: #575757; }
-  #feedback #clients .client-active {
-    opacity: 1;
-    border-bottom: 1px solid #1AC6FF; }
-    #feedback #clients .client-active div h3 {
-      color: #1AC6FF; }
-    #feedback #clients .client-active div span {
-      color: #575757; }
-      #feedback #clients .client-active div span font {
+#feedback {
+  overflow: hidden; }
+  #feedback h2 {
+    color: white; }
+  #feedback #reviews {
+    padding: 20px; }
+    #feedback #reviews div {
+      margin-top: 10px; }
+      #feedback #reviews div img {
+        margin: 10px; }
+      #feedback #reviews div p {
+        font-family: "Lato", sans-serif;
+        color: white;
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 30px; }
+  #feedback #clients {
+    background: white; }
+    #feedback #clients .col-md-10 {
+      border-bottom: 1px solid #d6d6d6; }
+    #feedback #clients .client {
+      opacity: 0.7;
+      position: relative;
+      padding: 35px 0px; }
+      #feedback #clients .client img {
+        width: 70px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 15px; }
+      #feedback #clients .client div {
+        position: absolute;
+        height: auto;
+        padding: 10px 0px;
+        display: inline-block; }
+        #feedback #clients .client div h3 {
+          font-size: 16px;
+          margin: 5px 0;
+          color: #575757;
+          text-transform: uppercase; }
+        #feedback #clients .client div span {
+          font-size: 16px;
+          color: #575757; }
+    #feedback #clients .client-active {
+      opacity: 1;
+      border-bottom: 1px solid #1AC6FF; }
+      #feedback #clients .client-active div h3 {
         color: #1AC6FF; }
+      #feedback #clients .client-active div span {
+        color: #575757; }
+        #feedback #clients .client-active div span font {
+          color: #1AC6FF; }
 
 #team {
   padding: 40px 0;
-  background: white; }
+  background: white;
+  overflow: hidden; }
   #team p {
     margin: 40px; }
   #team .team-member {
@@ -379,7 +382,11 @@ nav .navbar-nav button {
           height: 35px;
           padding: 10px;
           text-align: center;
-          color: white; }
+          color: white;
+          transition: all 0.4s ease; }
+          #team .team-member .info-team div i:hover {
+            background: white;
+            color: #1AC6FF; }
     #team .team-member:hover .info-team {
       opacity: 1; }
 

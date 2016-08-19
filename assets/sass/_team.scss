@@ -1,6 +1,7 @@
 #team{
     padding:40px 0;
     background:white;
+    overflow:hidden;
     p{
         margin:40px;
     }
@@ -45,8 +46,15 @@
                     height:35px;
                     padding:10px;
                     text-align:center;
-                    color:white
+                    color:white;
+                    transition: all 0.4s ease;
+                    
+                    &:hover{
+                        background:white;
+                        color:$main-color;
+                    }
                 }
+                
             }
         }
         &:hover{

@@ -5,6 +5,7 @@ setTimeout(function(){ $("#slider").animate({"opacity": "1"}) ; }, 500);
 
 //********************Scroll function*******************//
 var i=1;
+var k=1;
 $(window).scroll(function() {
   var wScroll=$(window).scrollTop()
   var wHeight=$(window).height()
@@ -19,9 +20,11 @@ if ( wScroll > $("#logos").offset().top-wHeight/2-100 ){
 	 .animate({"top": "0"} ,250) 
 	 i++;
 	 //repeat 5 times
-	 if(i==6){ clearInterval( logos) }
+	 
 	}
+    
 	, 300);
+    if(i>=6){ clearInterval( logos) }
 }
     //*****************ABout**************//
    if ( wScroll > $("#about").offset().top-wHeight/2 ){
@@ -69,6 +72,24 @@ if ( wScroll > $("#logos").offset().top-wHeight/2-100 ){
     $("#awards .animateTop").css("animation-play-state" , "running");
     }
     
+    //***********************Feedback******************************
+     if ( wScroll > $("#feedback").offset().top-wHeight/2 ){
+    $("#feedback #reviews").css("animation-play-state" , "running");
+    }
+    if ( wScroll > $("#feedback").offset().top-wHeight/2+180 ){
+    $("#feedback #clients").css("animation-play-state" , "running");
+    }
+    
+    //**********************Team******************************
+    if ( wScroll > $("#teamMembers").offset().top-wHeight/2 ){
+    $("#teamMembers .team-member:first-child").css("animation-play-state" , "running"); 
+        setTimeout( function(){ 
+    $("#teamMembers .team-member:nth-child(2)").css("animation-play-state" , "running")} ,300)
+        setTimeout( function(){ 
+    $("#teamMembers .team-member:nth-child(3)").css("animation-play-state" , "running")} ,600)
+        setTimeout( function(){ 
+    $("#teamMembers .team-member:nth-child(4)").css("animation-play-state" , "running")} ,900)
+    }
 })
 
 //**********************Buttons***********************
@@ -85,7 +106,6 @@ $("#about .button-group button:first-child").on('click', function(){
     $("#about .thirdTab").hide()
     
 })
-
 $("#about .button-group button:nth-child(2)").on('click', function(){
     $("#about .button-group button").removeClass("active-button");
     $(this).addClass("active-button");
