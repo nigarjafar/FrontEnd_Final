@@ -15,7 +15,7 @@
 </head>
 <body>
     <header>    
-        <nav class="navbar">
+        <nav class="navbar navbar-no-scroll">
           <div class="container">
             <div class="navbar-header">
               <a class="navbar-brand" href="#">
@@ -54,11 +54,11 @@
     </header>
     <section id="logos">
         <div class="container">
-            <img src="assets/img/logos/logo-1.png">
-            <img src="assets/img/logos/logo-1.png">
-            <img src="assets/img/logos/logo-1.png">
-            <img src="assets/img/logos/logo-1.png">
-            <img src="assets/img/logos/logo-1.png">
+            <img class="animateTop"src="assets/img/logos/logo-1.png">
+            <img class="animateBottom"src="assets/img/logos/logo-1.png">
+            <img class="animateTop"src="assets/img/logos/logo-1.png">
+            <img class="animateBottom"src="assets/img/logos/logo-1.png">
+            <img class="animateTop"src="assets/img/logos/logo-1.png">
         </div>
     </section>
     <section id="about">
@@ -153,12 +153,12 @@
             <div class="container">
                 <div class="row">
                     <ul class="col-md-4">
-                        <li class="active" id="ftrs1">
+                        <li class="active" id="feature1">
                             <span>Lorem ipsum</span>
                             <p>Sit amet, consectetur adipiscing elit.
                                 In hac divisione rem ipsam prorsus probo.</p>
                         </li>
-                         <li id="ftrs2">
+                         <li id="feature2">
                             <span>Lorem ipsum</span>
                             <p>Sit amet, consectetur adipiscing elit.
                                 In hac divisione rem ipsam prorsus probo.</p>
@@ -170,8 +170,8 @@
                         </li>
                     </ul>
                     <div class="col-md-8 img-div">
-                        <img class="ftrs1" src="assets/img/features/rich_features_1.png">
-                        <img class="ftrs2" src="assets/img/features/rich_features_2.png">
+                        <img class="feature1" src="assets/img/features/rich_features_1.png">
+                        <img class="feature2" src="assets/img/features/rich_features_2.png">
                         <img class="feature3" src="assets/img/features/rich_features_3.png">
                     </div>
                 </div>
@@ -318,7 +318,29 @@
         <div id="reviews" class="text-center animateTop">
             <h2>what <font>clients</font> say</h2>
             <div class="container">
-                <div class="row" class="client-review">
+                <div class="col-md-4" class="client-review">
+                    <div class="col-md-1 col-md-offset-1">
+                        <img src="assets/img/icons/quotes-a.png">
+                    </div>
+                    <div  class="col-md-8">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non bibendum metus. Aenean vel rutrum velit. Duis aliquet augue non augue volutpat, ut viverra est sagittis. Duis elementum mi mauris, nec rhoncus dolor consectetur vitae lorem ipsum.</p>
+                    </div>
+                    <div class="col-md-1">
+                        <img src="assets/img/icons/quotes-b.png">
+                    </div>
+                </div>
+                <div class="col-md-4" class="client-review">
+                    <div class="col-md-1 col-md-offset-1">
+                        <img src="assets/img/icons/quotes-a.png">
+                    </div>
+                    <div  class="col-md-8">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non bibendum metus. Aenean vel rutrum velit. Duis aliquet augue non augue volutpat, ut viverra est sagittis. Duis elementum mi mauris, nec rhoncus dolor consectetur vitae lorem ipsum.</p>
+                    </div>
+                    <div class="col-md-1">
+                        <img src="assets/img/icons/quotes-b.png">
+                    </div>
+                </div>
+                <div class="col-md-4" class="client-review">
                     <div class="col-md-1 col-md-offset-1">
                         <img src="assets/img/icons/quotes-a.png">
                     </div>
@@ -479,6 +501,10 @@
         </div>
         <div id="copyright"></div>
     </footer>
+    <!--Arrow button for scrolling top -->
+    <div class="scrollTop text-center">
+        <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+    </div>
         
     <script src="assets/js/jquery-3.1.0.min.js"></script>
     <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.2.js"><\/script>')</script>

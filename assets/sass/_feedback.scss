@@ -5,15 +5,17 @@
     }
     #reviews{
         padding:20px;
-        div{
-            margin-top:10px;
-            img{margin:10px;}
-            p{
-                font-family:"Lato", sans-serif;
-                color:white;
-                font-size:17px;
-                font-weight:300;
-                line-height:30px;
+        .container{
+            .client-review{
+                margin-top:10px;
+                img{margin:10px;}
+                p{
+                    font-family:"Lato", sans-serif;
+                    color:white;
+                    font-size:17px;
+                    font-weight:300;
+                    line-height:30px;
+                }
             }
         }
     }
