@@ -22,19 +22,49 @@
                 <img src="assets/img/logo.png">
               </a>
             </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Prices</a></li>
-                <li><a href="#">Feedback</a></li>
-                <li><a href="#">Team</a></li>
-                <li><a href="#">Contacts</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extra <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Homepages</a></li>
-                  </ul>
+            <ul class="nav navbar-nav navbar-left">
+                <li class="home active"><a href="#">Home</a></li>
+                <li class="about"><a  href="#">About</a></li>
+                <li class="features"><a href="#">Features</a></li>
+                <li class="prices"><a href="#">Prices</a></li>
+                <li class="feedback"><a href="#">Feedback</a></li>
+                <li class="team"><a href="#">Team</a></li>
+                <li class="footer"><a href="#">Contacts</a></li>
+                <li class="extra">
+                  <a href="#" >Extra <span class="caret"></span></a>
+                      <ul class="dropdown-extra">
+                        <li><a href="#">Homepages <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                            <ul style="top:0px;">
+                                <li><a href="#">Default</a></li>
+                                <li><a href="#">clickthrough</a></li>
+                                <li><a href="#">colored</a></li>
+                                <li><a href="#">fast registration</a></li>
+                                <li><a href="#">promo</a></li>
+                                <li><a href="#">video background</a></li>
+                                <li><a href="#">youtube embed</a></li>
+                                <li><a href="#">video embed</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Blog <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                            <ul style="top:44px;">
+                                <li><a href="#">List</a></li>
+                                <li><a href="#">Post</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">E-commerce<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                            <ul style="top:88px;">
+                                <li><a href="#">Product Page</a></li>
+                                <li><a href="#">Product List</a></li>
+                                <li><a href="#">Product Grid</a></li>
+                                <li><a href="#">Cart Checkout</a></li>
+                                <li><a href="#">Payment Information</a></li>
+                            </ul>
+
+                        </li>
+                        <li><a href="#">Registration</a></li>
+                        <li><a href="#">Forms</a></li>
+                        <li><a href="#">Shortcodes</a></li>
+                      </ul>
                 </li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
@@ -318,7 +348,7 @@
         <div id="reviews" class="text-center animateTop">
             <h2>what <font>clients</font> say</h2>
             <div class="container">
-                <div class="col-md-4" class="client-review">
+                <div class="row client1-review">
                     <div class="col-md-1 col-md-offset-1">
                         <img src="assets/img/icons/quotes-a.png">
                     </div>
@@ -329,7 +359,7 @@
                         <img src="assets/img/icons/quotes-b.png">
                     </div>
                 </div>
-                <div class="col-md-4" class="client-review">
+                <div class="row client2-review">
                     <div class="col-md-1 col-md-offset-1">
                         <img src="assets/img/icons/quotes-a.png">
                     </div>
@@ -340,7 +370,7 @@
                         <img src="assets/img/icons/quotes-b.png">
                     </div>
                 </div>
-                <div class="col-md-4" class="client-review">
+                <div class="row client3-review">
                     <div class="col-md-1 col-md-offset-1">
                         <img src="assets/img/icons/quotes-a.png">
                     </div>
@@ -355,22 +385,22 @@
         </div>
         <div id="clients" class="animateTop">
             <div class="container">
-                <div class="col-md-10 col-md-offset-1">
-                    <div class="col-md-4 client client-active">
+                <div class="col-md-10 col-md-offset-1 ">
+                    <div id="client1" class="col-md-4 client-active client">
                         <img src="assets/img/people/profile-1.jpg">
                         <div>
                             <h3>Amy Warner</h3>
                             <span>Investor at <font>Pear Inc.</font></span>
                         </div>
                     </div>
-                    <div class="col-md-4 client">
+                    <div id="client2" class="col-md-4 client">
                         <img src="assets/img/people/profile-2.jpg">
                         <div>
                             <h3>John Doesome</h3>
                             <span>Accountant at <font>Vell Inc.</font></span>
                         </div>
                     </div>
-                    <div class="col-md-4 client">
+                    <div id="client3" class="col-md-4 client">
                         <img src="assets/img/people/profile-1.jpg">
                         <div>
                             <h3>Peter Moosome</h3>

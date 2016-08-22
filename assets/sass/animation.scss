@@ -104,3 +104,15 @@
     80%{ left:-160px}
     100%{ left: -115px}
 }
+
+//Feedback//
+.animateFeedback{
+    position:relative;
+    animation: animateFeedback .8s ease;
+    animation-play-state:paused;
+}
+
+@keyframes animateFeedback{
+    0%{     left:-1300px;   }
+    100%{    left:0px;      }
+}

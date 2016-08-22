@@ -6,15 +6,18 @@
     padding-right: 50px; }
     .navbar .navbar-header a img {
       width: 130px; }
-  .navbar .navbar-nav li a {
-    padding: 20px 10px 15px;
-    text-transform: uppercase;
-    font-size: 14px; }
-    .navbar .navbar-nav li a:hover {
-      color: #1AC6FF;
-      background: none; }
-    .navbar .navbar-nav li a:focus {
-      background: none; }
+  .navbar .navbar-nav > li {
+    border-top: 3px solid transparent; }
+    .navbar .navbar-nav > li a {
+      margin-top: 10px;
+      padding: 10px 10px 15px;
+      text-transform: uppercase;
+      font-size: 14px; }
+      .navbar .navbar-nav > li a:hover {
+        color: #1AC6FF;
+        background: none; }
+      .navbar .navbar-nav > li a:focus {
+        background: none; }
   .navbar .navbar-nav .active {
     border-bottom: 2px solid #1AC6FF; }
     .navbar .navbar-nav .active a {
@@ -38,6 +41,52 @@
   top: 0; }
   .navbar-scroll li a {
     color: #1D1D1D; }
+
+.extra:hover {
+  padding: 0;
+  border-top: 3px solid #1AC6FF !important;
+  background-color: #272727; }
+.extra .dropdown-extra {
+  position: absolute;
+  display: none;
+  border: none;
+  list-style-type: none;
+  padding: 0;
+  background-color: #272727; }
+  .extra .dropdown-extra > li {
+    padding: 0 15px; }
+    .extra .dropdown-extra > li a {
+      margin: 0;
+      width: 170px;
+      border-bottom: 1px solid #343434;
+      padding: 10px 0 !important;
+      color: white;
+      text-decoration: none;
+      display: inline-block; }
+      .extra .dropdown-extra > li a i {
+        font-size: 20px;
+        float: right;
+        color: white; }
+    .extra .dropdown-extra > li:last-child a {
+      border: none; }
+    .extra .dropdown-extra > li:hover {
+      background: #000000; }
+      .extra .dropdown-extra > li:hover a {
+        border: transparent; }
+  .extra .dropdown-extra ul {
+    position: absolute;
+    display: none;
+    left: 200px;
+    border: none;
+    list-style-type: none;
+    padding: 0;
+    background: #272727; }
+    .extra .dropdown-extra ul li a {
+      width: 165px;
+      padding: 10px 5px !important;
+      color: white;
+      text-decoration: none;
+      display: inline-block; }
 
 #slider {
   opacity: 0;
@@ -311,11 +360,11 @@
     color: white; }
   #feedback #reviews {
     padding: 20px; }
-    #feedback #reviews .container .client-review {
+    #feedback #reviews .container .row {
       margin-top: 10px; }
-      #feedback #reviews .container .client-review img {
+      #feedback #reviews .container .row img {
         margin: 10px; }
-      #feedback #reviews .container .client-review p {
+      #feedback #reviews .container .row p {
         font-family: "Lato", sans-serif;
         color: white;
         font-size: 17px;
@@ -572,6 +621,16 @@
     left: -160px; }
   100% {
     left: -115px; } }
+.animateFeedback {
+  position: relative;
+  animation: animateFeedback .8s ease;
+  animation-play-state: paused; }
+
+@keyframes animateFeedback {
+  0% {
+    left: -1300px; }
+  100% {
+    left: 0px; } }
 body, html {
   height: 100%;
   background-image: url("../img/background/bg.jpg");

@@ -1,13 +1,37 @@
-//Details
-//**hide scroll-top button 
+
+
+//Details 
+
 $(".scrollTop").hide();
+$("#about .firstTab").show();
+$("#about .secondTab").hide();
+$("#about .thirdTab").hide();
+$("#reviews .container .row").hide()
+$(".client1-review").show()
+//Navbar-extra//
+$(".extra").mouseenter(function(){
+    $(".dropdown-extra")
+        .slideDown()
+        .css("display", "block")
+})
+$(".extra").mouseleave(function(){
+    $(".dropdown-extra").hide();
+})
+$(".dropdown-extra li").mouseenter(function(){
+    $(this).find("ul")
+    .show()
+    .css("display", "block")
+})
+$(".dropdown-extra li").mouseleave(function(){
+    $(".dropdown-extra li ul").hide()
+})
 //******************SLIDER*************
 setTimeout(function () {
     $("#slider").animate({
         "opacity": "1"
     });
 }, 500);
-//*****************LOGOS***************
+
 //********************Scroll function*******************//
 var i = 1;
 var k = 1;
@@ -23,8 +47,8 @@ $(window).scroll(function () {
             $(".navbar-brand img").attr("src", "assets/img/logo.png")
             $(".navbar").addClass("navbar-no-scroll").removeClass("navbar-scroll").removeClass("animateTopNav")
                 //Add active class=>home
-            $(".navbar-nav li").removeClass("active")
-            $(".navbar-nav li:first-child").addClass("active")
+            $(".navbar-left li").removeClass("active")
+            $(".home").addClass("active")
         }
         //****************Logos**********************
         if (wScroll > $("#logos").offset().top - wHeight / 2 - 100) {
@@ -44,13 +68,13 @@ $(window).scroll(function () {
         }
         //*****************ABout**************//
         if (wScroll > $("#about").offset().top - wHeight / 2) {
-            $(".navbar-nav li").removeClass("active")
-            $(".navbar-nav li:nth-child(2)").addClass("active")
-            $("#about .firstTab").show()
+            $(".navbar-left li").removeClass("active")
+            $(".about").addClass("active")
+            
+           
             $("#about .firstTab .animateLeft").css("animation-play-state", "running");
             $("#about .firstTab .animateRight").css("animation-play-state", "running");
-            $("#about .secondTab").hide()
-            $("#about .thirdTab").hide()
+           
             if (wScroll > $("#about .newAgeTech").offset().top - wHeight / 2) {
                 $("#about .newAgeTech .animateLeft").css("animation-play-state", "running");
                 $("#about .newAgeTech .animateRight").css("animation-play-state", "running");
@@ -63,7 +87,7 @@ $(window).scroll(function () {
         //****************Features****************//
         if (wScroll > $("#features").offset().top - wHeight / 2) {
             $(".navbar-nav li").removeClass("active")
-            $(".navbar-nav li:nth-child(3)").addClass("active")
+            $(".features").addClass("active")
             $("#features .feature1").css("animation-play-state", "running");
         }
         if (wScroll > $("#features .animateRight").offset().top - wHeight / 2 + 10) {
@@ -82,7 +106,7 @@ $(window).scroll(function () {
         //*****************Prices***********************
         if (wScroll > $("#prices").offset().top - wHeight / 2 + 20) {
             $(".navbar-nav li").removeClass("active")
-            $(".navbar-nav li:nth-child(4)").addClass("active")
+            $(".prices").addClass("active")
             $("#prices .animateBottom").css("animation-play-state", "running");
         }
         //****************Awards*****************
@@ -90,18 +114,18 @@ $(window).scroll(function () {
             $("#awards .animateTop").css("animation-play-state", "running");
         }
         //***********************Feedback******************************
-        if (wScroll > $("#feedback").offset().top - wHeight / 2) {
+        if (wScroll > $("#feedback").offset().top - wHeight / 2-50) {
             $(".navbar-nav li").removeClass("active")
-            $(".navbar-nav li:nth-child(5)").addClass("active")
+            $(".feedback").addClass("active")
             $("#feedback #reviews").css("animation-play-state", "running");
         }
-        if (wScroll > $("#feedback").offset().top - wHeight / 2 + 180) {
+        if (wScroll > $("#feedback").offset().top - wHeight / 2 + 50) {
             $("#feedback #clients").css("animation-play-state", "running");
         }
         //**********************Team******************************
         if (wScroll > $("#teamMembers").offset().top - wHeight / 2) {
             $(".navbar-nav li").removeClass("active")
-            $(".navbar-nav li:nth-child(6)").addClass("active")
+            $(".team").addClass("active")
             $("#teamMembers .team-member:first-child").css("animation-play-state", "running");
             setTimeout(function () {
                 $("#teamMembers .team-member:nth-child(2)").css("animation-play-state", "running")
@@ -116,7 +140,7 @@ $(window).scroll(function () {
         //*****************Contact*********************
         if (wScroll > $("#footer").offset().top - wHeight / 2) {
             $(".navbar-nav li").removeClass("active")
-            $(".navbar-nav li:nth-child(7)").addClass("active")
+            $(".contact").addClass("active")
         }
         //**************************Scroll Top ***********************
         if (wScroll > $("#about").offset().top - wHeight / 2 + 100) {
@@ -131,6 +155,14 @@ $(window).scroll(function () {
         }
     })
     //**********************Buttons***********************
+    //navbar
+    $(".navbar-left li").on("click",function(){
+        $class=$(this).attr("class")
+        $scrollTo=$("#"+$class).offset().top;
+        $('html, body').animate({
+        'scrollTop' : $scrollTo
+        });
+    })
     //******************ABOUT********************
 $("#about .button-group button:first-child").on('click', function () {
     $("#about .button-group button").removeClass("active-button");
@@ -169,5 +201,19 @@ $("#features ul li").on("click", function () {
         $("." + idName).show().css("animation-play-state", "running")
         $(this).addClass("active")
     })
-    //*************************TEAM**************************
+   //********************CLients*********************//
+
+$(".client").on("click",function(){
+    $("#reviews .container .row").hide()
+    $id=$(this).attr("id");
+    console.log($id)
+    
+    $("."+$id+"-review")
+        .show()
+        .addClass("animateFeedback")
+        .css("animation-play-state", "running")
+    
+    $(".client").removeClass("client-active")
+    $(this).addClass("client-active")
+})
     //hover
