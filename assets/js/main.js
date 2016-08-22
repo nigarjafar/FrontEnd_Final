@@ -140,7 +140,7 @@ $(window).scroll(function () {
         //*****************Contact*********************
         if (wScroll > $("#footer").offset().top - wHeight / 2) {
             $(".navbar-nav li").removeClass("active")
-            $(".contact").addClass("active")
+            $(".footer").addClass("active")
         }
         //**************************Scroll Top ***********************
         if (wScroll > $("#about").offset().top - wHeight / 2 + 100) {
